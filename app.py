@@ -6,7 +6,7 @@ model = joblib.load("extra_trees_credit_model.pkl")
 encoders = {col : joblib.load(f"{col}_encoder.pkl") for col in ["Sex", "Housing","Saving accounts", "Checking account" ]}
 
 st.title("Credit Risk Prediction App ")
-st.write("Enter applicate information to predict if the credit risk is good or bad")
+st.write("Enter applicant information to predict if the credit risk is good or bad")
 
 age = st.number_input("Age", min_value = 18, max_value= 80, value =30)
 sex = st.selectbox("Sex", ["Male", "Female"])
